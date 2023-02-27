@@ -1,0 +1,532 @@
+{
+	"info": {
+		"_postman_id": "e59b9582-33e6-43c2-b7fd-bd4b20226d69",
+		"name": "HRMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllPositions",
+			"_postman_id": "7ce8deb9-ce6b-4d9a-b7ad-4ab2786c3056",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/intervPosition/getAllPosition"
+			},
+			"response": []
+		},
+		{
+			"name": "getById",
+			"_postman_id": "33f9cf11-6a87-4d53-9458-c8aca9ab34cf",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/employee/getById/52"
+			},
+			"response": []
+		},
+		{
+			"name": "searchByFirstLastname",
+			"_postman_id": "ed4f1ed7-f1c0-4d86-98eb-4ba5e0b0fd2b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employee/searchByFirstLastname?query=a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"searchByFirstLastname"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateEmployee",
+			"_postman_id": "c4c0ecfd-a101-4794-88a5-a3a5b657109f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"empId\": 202,\r\n         \"mobileNo\": 9644644798,\r\n        \"emailId\": \"anandpalsingh.adt@gmail.com\",\r\n        \"designation\": \"JE\",\r\n        \"joinDate\": \"19-11-2022\",\r\n        \"gender\": \"M\",\r\n        \"dob\": \"15-10-2000\",\r\n        \"maritalStatus\": \"Unmarried\",\r\n        \"lname\": \"Pal Singh\",\r\n        \"fname\": \"Anand\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/employee/updateEmp"
+			},
+			"response": []
+		},
+		{
+			"name": "addEmployeePosition",
+			"_postman_id": "e2e24408-f9f2-4a9e-a55d-19721de49be4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"id\": 113,\r\n    \"techId\": 10,\r\n    \"positionOpenDate\": \"2012-08-12\",\r\n    \"positionCloseDate\": \"2012-08-12\",\r\n    \"status\": \"Available\",\r\n    \"experienceInYear\": 6.0,\r\n    \"remote\": false,\r\n    \"positionType\": \"Permanent\"\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": "localhost:8080/intervPosition/getAllPosition"
+			},
+			"response": []
+		},
+		{
+			"name": "findStatusById",
+			"_postman_id": "75a6e337-c436-4e4e-9e2e-a4e4010cc239",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmFuZG1ld2FkYTU1QGdtYWlsLmNvbSIsImlhdCI6MTY3NDEwNjM3MSwiZXhwIjoxNjc0MTA3ODExfQ.gUzgTjI43VmUxnZ_GYuYFn3NjLWWKiQA9iPMK1Zy42A"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9090/employee/findStatusById/104"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9090/intervPosition/getAllPosition",
+			"_postman_id": "35c688dd-58c8-4827-9395-bf526745f651",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/intervPosition/getAllPosition"
+			},
+			"response": []
+		},
+		{
+			"name": "CheckOut",
+			"_postman_id": "97c946cc-cf5f-4ba5-a5a0-a7c30cf01c42",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": "http://localhost:9095/payroll/timeSheet/checkOut/6"
+			},
+			"response": []
+		},
+		{
+			"name": "addEmp",
+			"_postman_id": "65c0428b-574e-45ce-948b-67990d949c18",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{       \r\n        \"empId\": 4,\r\n        \"mobileNo\": 859384469,\r\n        \"emailId\": \"Kumukesh@gmail.com\",\r\n        \"designation\": \"SE\",\r\n        \"joinDate\": \"19-11-2021\",\r\n        \"gender\": \"M\",\r\n        \"dob\": \"02-06-1990\",\r\n        \"maritalStatus\": \"Married\",\r\n        \"lname\": \"chandalwar\",\r\n        \"fname\": \"mukesh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/employee/addEmp"
+			},
+			"response": []
+		},
+		{
+			"name": "saveLeave",
+			"_postman_id": "77a48e75-0193-4dc7-a01b-008d5dcfb056",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"empId\":5,\r\n    \"leaveBalance\":12\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/leave/saveLeave"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllEmpLeaves",
+			"_postman_id": "b7659d34-dbe9-44ff-bf62-4c5ac3b9cc20",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:9095/payroll/leave/getAllEmpLeaves"
+			},
+			"response": []
+		},
+		{
+			"name": "getLeaveById",
+			"_postman_id": "6c7a391e-6493-4142-b52a-312bd7313a0f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9095/payroll/leave/getById/104"
+			},
+			"response": []
+		},
+		{
+			"name": "updateLeave",
+			"_postman_id": "c0285824-a091-4963-a2b9-336e0eee6f5d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": "http://localhost:9090/leave/updateLeave/103/1"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllEmpDetails",
+			"_postman_id": "31172e84-0995-42cb-8183-d27310714c30",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/employee/getAllEmp"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllEmpSalary",
+			"_postman_id": "1804e058-f4cf-4fd3-a064-d4a04a5ad3bd",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9095/payroll/salary/getAllEmpSalary"
+			},
+			"response": []
+		},
+		{
+			"name": "checkIn",
+			"_postman_id": "08465527-1025-4e83-9da7-42f28f3d048e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:9095/payroll/timeSheet/checkIn/6"
+			},
+			"response": []
+		},
+		{
+			"name": "checkStatus",
+			"_postman_id": "2c6e7864-7c03-4ff7-a721-eae8bd2c3666",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:9095/payroll/timeSheet/checkStatus/6"
+			},
+			"response": []
+		},
+		{
+			"name": "readExcelFile",
+			"_postman_id": "4c6db85a-3525-4dad-a468-e0b6e14b135a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Anand pal s\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/payroll/readExcelFile?name=dhananjay bobde&month=december&AddOn=0&MidPeriod=&Add=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"payroll",
+						"readExcelFile"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "dhananjay bobde"
+						},
+						{
+							"key": "month",
+							"value": "december"
+						},
+						{
+							"key": "AddOn",
+							"value": "0"
+						},
+						{
+							"key": "MidPeriod",
+							"value": ""
+						},
+						{
+							"key": "Add",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "priorTimeAdjustment",
+			"_postman_id": "33285473-7d98-4c2a-a499-8af97e3f4d7f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9095/payroll/timeSheet/priorTimeAdjustment/85"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9095/payroll/salary/getSalaryById/12",
+			"_postman_id": "da9c0516-df33-48c6-a70a-2c69e3d5562c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9095/payroll/salary/getSalaryById/12"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/sendMailWithAttachment",
+			"_postman_id": "6c17837c-cfed-478f-be0e-ed5dd409a2c8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"recipient\":\"anandmewada55@gmail.com\",\r\n    \"msgBody\":\"Hey this mail is for testing purpose with rest api\",\r\n    \"subject\":\"simple email message\",\r\n    \"attachment\":\"D:\\\\systemInfo.txt\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/sendMailWithAttachment"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9095/payroll/leav",
+			"_postman_id": "498332d7-bce3-4ec5-bd1c-4769c6e5103a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:9095/payroll/leav"
+			},
+			"response": []
+		},
+		{
+			"name": "empAttendenceByID",
+			"_postman_id": "b190c4eb-715f-4ee3-a5fd-1c69d19557ea",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "empId",
+							"value": "2",
+							"type": "default"
+						},
+						{
+							"key": "fromDate",
+							"value": "2023-02-08",
+							"type": "default"
+						},
+						{
+							"key": "toDate",
+							"value": "2023-02-13",
+							"type": "default"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": "http://localhost:9095/payroll/timeSheet/empAttendence"
+			},
+			"response": []
+		},
+		{
+			"name": "allEmpAttendence",
+			"_postman_id": "5d515ffb-781d-4f34-86bb-be8e8621fb54",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9095/payroll/timeSheet/allEmpAttendence?fromDate=2023-02-08&toDate=2023-02-10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9095",
+					"path": [
+						"payroll",
+						"timeSheet",
+						"allEmpAttendence"
+					],
+					"query": [
+						{
+							"key": "fromDate",
+							"value": "2023-02-08"
+						},
+						{
+							"key": "toDate",
+							"value": "2023-02-10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "empAttendence",
+			"_postman_id": "7b8b4fa7-d6b3-4841-9627-f41997993a17",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9095/payroll/timeSheet/empAttendence?fromDate=2023-02-08&toDate=2023-02-10&empId=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9095",
+					"path": [
+						"payroll",
+						"timeSheet",
+						"empAttendence"
+					],
+					"query": [
+						{
+							"key": "fromDate",
+							"value": "2023-02-08"
+						},
+						{
+							"key": "toDate",
+							"value": "2023-02-10"
+						},
+						{
+							"key": "empId",
+							"value": "2",
+							"type": "default"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
